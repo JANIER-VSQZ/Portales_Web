@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Ejemplo formulario</title>
+
+    </head>
+    <body>
+        <h1>formulario</h1>
+        <!--metodo GET usa la URL para obtener la informacion del formulario
+            el metodo post se serializa en el cuerpo y luego se envia, se usa para
+            datos sensibles
+
+        -->
+        <form action="formulario.html" method="post">
+            <label for="txtPrimerNombre">
+                Primer Nombre
+            </label>
+            <!--dos elementos importantes el tipo y el nombre de la variable
+                name solo es el nombre de la variable, para acceder a las propiedades
+                de la variable es el Id, Id es el equivalente al nombre de un objeto en otros lenguajes
+                placeholder se utiliza para mostrar detalles dentro del textbos
+                title se utiliza para añadir documentacion al pocicionar el cursor sobre el textbox
+            -->
+            <input type="text" name="txtPrimerNombre" id="txtPrimerNombre" placeholder="Primer Nombre" title="Primer nombre del solicitante de la transaccion xyz"/>
+            <br>
+            <label for="txtApellidoPaterno">Apellido</label>
+            <input type="text" name="txtApellidoPaterno" id="txtApellidoPaterno" placeholder="Apellido Paterno" title="Apellido Paterno del solicitante de la transaccion xyz"/>
+            <br>
+            <label for="intEdad">Edad</label>
+            <input type="number" name="intEdad" id="intEdad" 
+                min="0" max="100" step="5" value="0"
+                placeholder="Edad del Solicitante" title="Edad del solicitante de la transaccion xyz"/>
+            <br>
+            <label for="Contrasenia">Contraseña</label>
+            <input type="password" name="Contrasenia" id="Contrasenia" placeholder="Contraseña" title="8 caracteres, 1 Mayúscula, 1 número y 1 Símbolo"/>
+            <br>
+            <!--para crear un grupo de radioButton en el name del imput se pone el ultimo
+            solo se cambia el id para asociarlo al label-->
+            <label>Color Preferido</label><br/>
+            <input type="radio" name="cmbColor" value="red" id="cmbColorRed"/>
+            <label for="cmbColorRed">&nbsp;Rojo</label>
+            <input type="radio" name="cmbColor" value="blue" id="cmbColorBlue"/>
+            <label for="cmbColorBlue">&nbsp;Azul</label>
+            <input type="radio" name="cmbColor" value="green" id="cmbColorGreen"/>
+            <label for="cmbColorGreen">&nbsp;Verde</label>
+            <label for="cmbPaieses">Pais de Origen</label>
+            <br>
+            <!--Creacion de un combobox-->
+            <select name="cmbPais" id="cmbPaieses">
+                <option value="HND">Honduras</option>
+                <option value="ESV">El Salvador</option>
+                <option value="NIC">Nicaragua</option>
+                <option value="GTM">Guatemala</option>
+                <option value="CTR">Costa Rica</option>
+                <option value="PNM">Panama</option>
+            </select>
+            <!--Creacion de textArea-->
+            <label for="txtBio">Bio Description</label><br>
+            <textarea id="txtBio" name="txtBio" placeholder="Esto es un texto largo" cols="50" rows="8"></textarea>
+            <!--formas de crear un boton, la etiqueta button se puede poner otros elementos html, como simbolor o imagenes
+                Input es mejor para ingreso de datos y buttons para botones
+                Input usa menos bit que button, si no es necesario el uso de elemento especiales es mejor utilizar el input 
+                para no hacer mas pesado el archivo html-->
+            <input type="submit" name="btnEnviar" id="btnEnviar" value="enviar"/>
+            &nbsp;
+            <button type="button" name="btnEnviar2" id="btnEnviar2"><strong>Enviar</strong></button>
+        </form>
+
+    </body>
+</html>
