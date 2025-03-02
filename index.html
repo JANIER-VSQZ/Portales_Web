@@ -7,12 +7,13 @@
         <!--enlace con la pagina de estilos.css-->
         <link rel="stylesheet" href="css/estilos.css"/>
         <!--Implementacion de un bloque de style, selector es una expresion que permite al navegador determinar a que nodos html le va aplicar un conjunto de reglas css-->
-        <style>
+        <link rel="stylesheet" href="css/grid.css"/>
+        <!--<style>
             h2{
                 color:green;
                 background-color: lightblue;
             }
-        </style>
+        </style>-->
     </head>
     <body>
         <header>
@@ -34,7 +35,17 @@
             
         </header>
         <main>
-
+            <section class="hero-panel">
+                <picture>
+                    <source srcset="https://picsum.photos/id/45/1300/900" media="{min-width:1025px}">
+                    <source srcset="https://picsum.photos/id/45/1024/720" media="{min-width:768px}">
+                    <img src="https://picsum.photos/id/45/400/400" alt="foto panel">
+                </picture>
+                <div class="q3">
+                    <h2>Clase de Portales Web 1</h2>
+                    <a href="" class="btn accent">Matricularse</a>
+                </div>
+            </section>
         <div class="contenedor">
             <h2 id = "ch1" >Representacion de contenido de texto</h2>
             <h3>Encabezados</h3>
@@ -103,30 +114,66 @@
             <p>
                 Son Listas que no establece un orden particular, simplemente enuncian elementos comunes de un dominio
                 <!--ol order list-->
-                <ul>
+                <ul class="smallTags">
                     <li>
                         <!--li list item-->
-                        Huevos
+                        <div>
+                            <span>
+                                <img src="https://placehold.co/180x64" alt="imagen inline">
+                                Huevos
+                            </span>
+                        </div>
+                        
                     </li>
                     <li>
-                        Leche
+                        <div>
+                            <span>
+                                <img src="https://placehold.co/180x64" alt="imagen inline">
+                                Leche
+                            </span>
+                        </div>
+                        
                     </li>
                     <li>
-                        frijoles
+                        <div>
+                            <span>
+                                <img src="https://placehold.co/180x64" alt="imagen inline">
+                                frijoles
+                            </span>
+                        </div>
+                        
                     </li>
                     <li>
-                        Pan
+                        <div>
+                            <span>
+                                <img src="https://placehold.co/180x64" alt="imagen inline">
+                                Pan
+                            </span>
+                        </div>
+                        
                     </li>
                     <li>
-                        cafe
+                        <div>
+                            <span>
+                                <img src="https://placehold.co/180x64" alt="imagen inline">
+                                cafe
+                            </span>
+                        </div>
+                        
                     </li>
                     <li>
-                        Chucherias
-                        <ul>
-                            <li>Zambos Salsa Verde</li>
-                            <li>Pringles Cebolla</li>
-                            <li>Cheetos frijoli</li>
-                        </ul>
+                        <div>
+                            <span>
+                                <img src="https://placehold.co/180x64" alt="imagen inline">
+                                Chucherias
+                                <ul>
+                                    <li>Zambos Salsa Verde</li>
+                                    <li>Pringles Cebolla</li>
+                                    <li>Cheetos frijoli</li>
+                                </ul>
+                            </span>
+                        </div>
+                        
                         
                     </li>
                 </ul>
@@ -144,6 +191,57 @@
             </p>
             <a href="#idx">ir al inicio</a>
             <h2 id = "ch3">Hipervinculos y navegacion</h2>
+
+            <section class="grid">
+                <div class="row">
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">3</div>
+                    <div class="col-3">3</div>
+                    <div class="col-3">3</div>
+                    <div class="col-3">3</div>
+                </div>
+            </section>
+
+            <section class="grid">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="https://placehold.co/180x300" alt="Profile Picture">
+
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fuga tempora iusto, quo minus doloremque iste qui soluta amet saepe voluptate blanditiis repellendus, ipsa eveniet voluptas error excepturi aliquam corrupti!</p>
+
+                            </div>
+                            <div class="col-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate reiciendis illum odit, eum expedita rem nisi! Impedit excepturi temporibus consequatur animi veniam velit nam et. Consequuntur dolor eius optio necessitatibus!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, blanditiis. Sunt repellat enim provident aspernatur distinctio maiores tenetur necessitatibus sed ipsum ratione quasi numquam delectus magnam quia, odio nihil velit?</p>
             <p>

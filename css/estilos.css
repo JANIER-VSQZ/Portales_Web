@@ -63,6 +63,7 @@ header nav li a:hover{
     max-width: 1024px;
     padding: 0.5rem;
     margin: 0.5rem;
+    overflow: hidden;
 }
 
 .cardContainer{
@@ -107,7 +108,92 @@ header nav li a:hover{
     font-size: 2rem;
 }
 
+.smallTags{
+    list-style: none;
+    display: flex;
+    /*con flex-direction se puede cambiar el eje vertical*/
+    flex-direction: column;
+    /*cuando se declara el flex, el eje principal es el horizontal 
+        el eje principal se modifica con justify-content
+    */
+    justify-content: space-between;
+
+    /*el eje secundario se modifica con align-items*/
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    
+}
+
+.smallTags li{
+    margin: 1rem 0rem;
+}
+
+.smallTags li div{
+    background-color: #9f9c02;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid #555304
+}
+
+/*la coma funciona como &&*/
+.smallTags li div img, .smallTags li div span{
+    display: block;
+}
+
+.hero-panel{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+.hero-panel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.hero-panel div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    box-shadow: 1px 1px 3px #000;
+    border-radius: 9px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.hero-panel div.q1{
+    top:25%;
+    left: 25%;
+}
+.hero-panel div.q2{
+    top:25%;
+    left: 75%;
+}
+.hero-panel div.q3{
+    top:75%;
+    left: 25%;
+}
+.hero-panel div.q4{
+    top:75%;
+    left: 75%;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    background-color: steelblue;
+    padding: 0.75rem 1rem;
+    border-radius: 17px;
+    box-shadow: 1px 1px 3px rgb(25, 60, 89);
+}
 /*
+    cajas visibles, contenido, padding y border, margin no es visible
+
     unidades de longitud
     absulutas px-> pixeles
     cm->centimetros
@@ -125,5 +211,10 @@ header nav li a:hover{
     1rem es 16px
 
     em->entity m relativo al contenedor padre
-    rem->relativo a la raiz
+    rem->relativo a la raiz raiz es = 16px o 1rem
+
+    elementos fluidos, flex, es mas dificil manipular lo que modifique el eje y
+    tipo bloque o block permite manipular todo.
+
+    para pocicionar un elemento de manera absoluta las coodenadas se obtiene del plano carteciano superior declarado
 */
