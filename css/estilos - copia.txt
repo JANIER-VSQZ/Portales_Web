@@ -164,82 +164,8 @@ header nav li a:hover{
 .smallTags li div img, .smallTags li div span{
     display: block;
 }
-.carruzel{
-    position:relative;
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    height: 80vh;
-}
-
-.carruzel .track{
-    display: flex;
-    position:absolute;
-    top: 0px;
-    left: 0px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.carruzel button[class*='btn']{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    padding: 2.5rem 1rem;
-    border-radius: 9px;
-    box-shadow: 1px 1px 3px;
-    cursor: pointer;
-    z-index: 999;
-}
-
-.carruzel button [class*='btn']:hover{
-    background-color: rgba(0,0,0,0.7);
-}
-
-.carruzel button [class*='btn']:focus{
-    outline: none;
-}
-
-.carruzel button.btn-left{
-    left: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-.carruzel button.btn-right{
-    right: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.carruzel div.nav{
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    position: absolute;
-    bottom: 7px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.carruzel div.nav button{
-    display: inline-block;
-    cursor: pointer;
-    background-color: white;
-    color:#333;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-}
-
-.carruzel div.nav button.active{
-    background-color: #333;
-    color:#fff;
-}
 
 .hero-panel{
-    flex: 0 0 100%;
     position: relative;
     width: 100%;
     height: 80vh;

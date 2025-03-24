@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--javaScript tiene 3 formas de ejecutarse en html
+            como en css la primera es embedida em el codigo html
+            agregando el script en un nodo
+
+            la segunda es estableciendo un bloque de script en el head
+            la tercera es referenciando un archivo js externo
+            
+            JavaScript no es tipificado, no se necesita declarar el tipo de dato
+            no es necesario poner punto y coma al final de cada instruccion pero si es recomendable usarlos
+            DOM (Document Object Model) es una representacion de la estructura de un documento html
+        -->
         <meta charset="utf-8"/>
+        <!--establece el lente
+            todo html debe tener el meta de viewport-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portales Web 1 Janier Vasquez</title>
         <!--enlace con la pagina de estilos.css-->
@@ -14,13 +27,26 @@
                 background-color: lightblue;
             }
         </style>-->
+        <script>
+            let mensajeAMostrar = "Click al preionar ID Ch1";
+            document.addEventListener("DOMContentLoaded", ()=>{
+                let ch1Element = document.getElementById("ch1");
+                ch1Element.addEventListener("click", (e)=>{
+                    e.preventDefault();
+                    e.stopPropagation();
+                    alert("Click al preionar ID Ch1");
+                });
+            });
+        </script>
+
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header>
             <div>
                 <img src="https://picsum.photos/id/96/64/64" alt="Brand Logo">
                 <!--forma embedida de aplicar estilos css-->
-                <h1 id = "idx">Portales Web</h1>
+                <h1 id = "idx" onclick="alert('Clicked on H1 Portales Web I')">Portales Web</h1>
             </div>
             <nav>
                 <ul>
@@ -35,17 +61,47 @@
             
         </header>
         <main>
-            <section class="hero-panel">
-                <picture>
-                    <source srcset="https://picsum.photos/id/45/1300/900" media="{min-width:1025px}">
-                    <source srcset="https://picsum.photos/id/45/1024/720" media="{min-width:768px}">
-                    <img src="https://picsum.photos/id/45/400/400" alt="foto panel">
-                </picture>
-                <div class="q3">
-                    <h2>Clase de Portales Web 1</h2>
-                    <a href="" class="btn accent">Matricularse</a>
-                </div>
+            <section class="carruzel">
+                
+                <section class="track">
+                    <section class="hero-panel">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/45/1300/900" media="{min-width:1025px}">
+                            <source srcset="https://picsum.photos/id/45/1024/720" media="{min-width:768px}">
+                            <img src="https://picsum.photos/id/45/400/400" alt="foto panel">
+                        </picture>
+                        <div class="q3">
+                            <h2>Clase de Portales Web 1</h2>
+                            <a href="" class="btn accent">Matricularse</a>
+                        </div>
+                        
+                    </section>
+                    <section class="hero-panel">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/90/1300/900" media="{min-width:1025px}">
+                            <source srcset="https://picsum.photos/id/90/1024/720" media="{min-width:768px}">
+                            <img src="https://picsum.photos/id/90/400/400" alt="foto panel">
+                        </picture>
+                        <div class="q2">
+                            <h2>Clase de Portales Web 1</h2>
+                            <a href="" class="btn accent">Matricularse</a>
+                        </div>
+                    </section>
+                    <section class="hero-panel">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/50/1300/900" media="{min-width:1025px}">
+                            <source srcset="https://picsum.photos/id/50/1024/720" media="{min-width:768px}">
+                            <img src="https://picsum.photos/id/50/400/400" alt="foto panel">
+                        </picture>
+                        <div class="q4">
+                            <h2>Clase de Portales Web 1</h2>
+                            <a href="" class="btn accent">Matricularse</a>
+                        </div>
+                    </section>
+                </section>
+                
             </section>
+            
         <div class="contenedor">
             <h2 id = "ch1" >Representacion de contenido de texto</h2>
             <h3>Encabezados</h3>
