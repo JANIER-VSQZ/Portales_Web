@@ -40,6 +40,7 @@
         </script>
 
         <script src="js/script.js"></script>
+        <script src="js/validacion.js"></script>
     </head>
     <body>
         <header>
@@ -104,9 +105,27 @@
             
         <div class="contenedor">
             <h2 id = "ch1" >Representacion de contenido de texto</h2>
+            <form action="index.html" id="formSolicitud" method="get" novalidate>
+                <div>
+                    <label for="txtPrimerNombre">Primer Nombre</label>
+                    <input type="text" name="txtPrimerNombre" id="txtPrimerNombre" placeholder="Primer Nombre del solicitante" required title="Primer Nombre del solicitante">
+                </div>
+                <div>
+                    <label for="txtPrimerApellido">Primer Nombre</label>
+                    <input type="text" name="txtPrimerApellido" id="txtPrimerApellido" placeholder="Primer Apellido del solicitante" required title="Primer Apellido del solicitante">
+                </div>
+                <div>
+                    <label for="txtCorreo">Correo Electronico</label>
+                    <input type="email" name="txtCorreo" id="txtCorreo" placeholder="Correo electronico del solicitante" required title="Correo electronico">
+                </div>
+                <div>
+                    <button type="subtmit" name="btnEnviar" id="btnEnviar">Enviar</button>
+                </div>
+                
+            </form>
             <h3>Encabezados</h3>
             <h3>Parrafos</h3>
-            <section class="cardContainer">
+            <section class="cardContainer" >
                 <div class="card">
                     <img src="https://picsum.photos/id/140/300/200" alt="tarjeta imagen">
                 <div class="cardBody">

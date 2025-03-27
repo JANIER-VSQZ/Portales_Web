@@ -89,9 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const tickFunction = () => {
-        timeoutID = setTimeout(moveSlide, waitingTime)
-            
-        
+        timeoutID = setTimeout(moveSlide, waitingTime);
     }
     renderNavigation();
     tickFunction();
